@@ -22,6 +22,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import de.gravitex.processing.entity.ProcessItem;
 import de.gravitex.processing.logic.TestRemote;
 
 public class RemoteEJBClient {
@@ -34,8 +35,16 @@ public class RemoteEJBClient {
     	
         // Let's lookup the remote stateless calculator
         final TestRemote remote = lookupRemoteStatelessCalculator();
+        
         remote.sayMoo();
         remote.sayMee();
+        
+		ProcessItem processItem = new ProcessItem();
+		processItem.setName("hanke");
+        
+        remote.createProcessItem(processItem);
+        
+//        System.out.println(remote.findAllProcessItems().size());
     }
 
     @SuppressWarnings("unchecked")
