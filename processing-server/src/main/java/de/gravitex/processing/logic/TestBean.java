@@ -29,8 +29,8 @@ public class TestBean implements TestRemote {
 		return null;
 //		return em.createNamedQuery(ProcessItem.FIND_ALL).getResultList();
 	}
-
-	public void createProcessItem(ProcessItem processItem) {
+	
+	public void createProcessItem(ProcessItem processItem) throws MyException {
 		em.persist(processItem);
 	}
 }

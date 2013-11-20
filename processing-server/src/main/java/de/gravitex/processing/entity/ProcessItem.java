@@ -11,7 +11,7 @@ import javax.persistence.SequenceGenerator;
 //@NamedQueries({ @NamedQuery(name = ProcessItem.FIND_ALL_ENTRIES, query = "SELECT o FROM ProcessItem AS o") })
 
 @Entity(name = "process_item")
-@SequenceGenerator(name="processing_id_seq", initialValue=1, allocationSize=100)
+@SequenceGenerator(name="processing_id_seq")
 public class ProcessItem implements Serializable {
 
 //	public static final String FIND_ALL_ENTRIES = "ProcessItem.findAllEntries";

@@ -12,5 +12,5 @@ public interface TestRemote {
     
     public List<ProcessItem> findAllProcessItems();
     
-    public void createProcessItem(ProcessItem processItem);
+    public void createProcessItem(ProcessItem processItem) throws MyException;
 }
