@@ -2,7 +2,7 @@ package de.gravitex.processing.logic;
 
 import java.util.List;
 
-import de.gravitex.processing.entity.ProcessItem;
+import de.gravitex.processing.entity.ProcessItemEntity;
 
 public interface TestRemote {
 
@@ -10,7 +10,7 @@ public interface TestRemote {
     
     public void sayMee();
     
-    public List<ProcessItem> findAllProcessItems();
+    public List<ProcessItemEntity> findAllProcessItems();
     
-    public void createProcessItem(ProcessItem processItem) throws MyException;
+    public void createProcessItem(ProcessItemEntity processItem) throws MyException;
 }

@@ -12,9 +12,11 @@ import javax.persistence.SequenceGenerator;
 
 @Entity(name = "process_item")
 @SequenceGenerator(name="processing_id_seq")
-public class ProcessItem implements Serializable {
+public class ProcessItemEntity implements Serializable {
 
 //	public static final String FIND_ALL_ENTRIES = "ProcessItem.findAllEntries";
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="processing_id_seq")

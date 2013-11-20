@@ -7,7 +7,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import de.gravitex.processing.entity.ProcessItem;
+import de.gravitex.processing.entity.ProcessItemEntity;
 
 @Stateless
 @Remote(TestRemote.class)
@@ -24,13 +24,12 @@ public class TestBean implements TestRemote {
 		System.out.println("mee123...");		
 	}
 
-	@SuppressWarnings("unchecked")
-	public List<ProcessItem> findAllProcessItems() {
+	public List<ProcessItemEntity> findAllProcessItems() {
 		return null;
 //		return em.createNamedQuery(ProcessItem.FIND_ALL).getResultList();
 	}
 	
-	public void createProcessItem(ProcessItem processItem) throws MyException {
+	public void createProcessItem(ProcessItemEntity processItem) throws MyException {
 		em.persist(processItem);
 	}
 }

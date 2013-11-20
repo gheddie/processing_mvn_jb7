@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.gravitex.processing.client;
+package de.gravitex.processing.core;
 
 import java.util.Hashtable;
 
@@ -22,7 +22,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import de.gravitex.processing.entity.ProcessItem;
+import de.gravitex.processing.entity.ProcessItemEntity;
 import de.gravitex.processing.logic.MyException;
 import de.gravitex.processing.logic.TestRemote;
 
@@ -40,7 +40,7 @@ public class RemoteEJBClient {
         remote.sayMoo();
         remote.sayMee();
         
-		ProcessItem processItem = new ProcessItem();
+		ProcessItemEntity processItem = new ProcessItemEntity();
 		processItem.setName("bbbbbbbbbbb66");
         
         try {
@@ -52,7 +52,7 @@ public class RemoteEJBClient {
 //        System.out.println(remote.findAllProcessItems().size());
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
 	private static TestRemote lookupRemoteStatelessCalculator() throws NamingException {
     	
         final Hashtable jndiProperties = new Hashtable();
