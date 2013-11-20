@@ -35,6 +35,7 @@ public class RemoteEJBClient {
         // Let's lookup the remote stateless calculator
         final TestRemote remote = lookupRemoteStatelessCalculator();
         remote.sayMoo();
+        remote.sayMee();
     }
 
     @SuppressWarnings("unchecked")
